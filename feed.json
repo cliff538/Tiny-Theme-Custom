@@ -7,10 +7,19 @@
 	"items": [
 		
 			{
+				"id": "http://cliff538.micro.blog/2026/01/08/look-at-what-you-find.html",
+				
+				"content_html": "<p>Look at what you find when you clean out the closet in your office.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "Look at what you find when you clean out the closet in your office.\n\n<img src=\"uploads/2026/img-4429.jpg\" width=\"600\" height=\"800\" alt=\"Auto-generated description: Various software packages for Windows XP, Mac OS X, iLife, iWork, MobileMe, Adobe Photoshop CS3, and Microsoft Office for Mac are arranged on a wooden surface.\">\n\n",
+				"date_published": "2026-01-08T14:42:56-07:00",
+				"url": "https://cliff538.com/2026/01/08/look-at-what-you-find.html",
+				"tags": ["photo"]
+			},
+			{
 				"id": "http://cliff538.micro.blog/2026/01/06/excellent-information-about-safe-mode.html",
 				
-				"content_html": "<p>Excellent information about <a href=\"https://eclecticlight.co/2025/03/21/when-you-should-use-safe-mode-and-what-it-does/\">Safe Mode</a> for Mac users, including what it is and when to use it.</p>\n<p>Howard&rsquo;s <a href=\"https://eclecticlight.co\">website</a> is a wealth of information and apps for understanding and diagnosing your Mac. Plus some great Art History lessons as well.</p>\n",
-				"content_text": "Excellent information about [Safe Mode](https://eclecticlight.co/2025/03/21/when-you-should-use-safe-mode-and-what-it-does/) for Mac users, including what it is and when to use it. \n\nHoward's [website](https://eclecticlight.co) is a wealth of information and apps for understanding and diagnosing your Mac. Plus some great Art History lessons as well. \n\n",
+				"content_html": "<p>Excellent information about <a href=\"https://eclecticlight.co/2025/03/21/when-you-should-use-safe-mode-and-what-it-does/\">Safe Mode</a> for Mac users, including what it is and when to use it.</p>\n<p>Howard&rsquo;s <a href=\"https://eclecticlight.co\">website</a> is a wealth of information and apps for understanding and diagnosing your Mac. Plus some great <a href=\"https://eclecticlight.co/painting-topics/\">Art History</a> lessons as well.</p>\n",
+				"content_text": "Excellent information about [Safe Mode](https://eclecticlight.co/2025/03/21/when-you-should-use-safe-mode-and-what-it-does/) for Mac users, including what it is and when to use it. \n\nHoward's [website](https://eclecticlight.co) is a wealth of information and apps for understanding and diagnosing your Mac. Plus some great [Art History](https://eclecticlight.co/painting-topics/) lessons as well. \n\n",
 				"date_published": "2026-01-06T14:00:07-07:00",
 				"url": "https://cliff538.com/2026/01/06/excellent-information-about-safe-mode.html",
 				"tags": ["resources","software"]
@@ -151,7 +160,7 @@
 				"id": "http://cliff538.micro.blog/2025/12/22/days-of-winter-wonder-photo.html",
 				
 				"content_html": "<p>📸 ❄️ 12 Days of Winter Wonder Photo Challenge - Day 8: Grinch</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📸 ❄️ 12 Days of Winter Wonder Photo Challenge - Day 8: Grinch\n\n<img src=\"https://cliff538.com/uploads/2025/sept2016hwy395rtd300-42.jpg\" width=\"600\" height=\"398\" alt=\"Auto-generated description: A coyote is lying on rocky ground with its mouth wide open as if yawning.\">\n\n",
+				"content_text": "📸 ❄️ 12 Days of Winter Wonder Photo Challenge - Day 8: Grinch\n\n<img src=\"uploads/2025/sept2016hwy395rtd300-42.jpg\" width=\"600\" height=\"398\" alt=\"Auto-generated description: A coyote is lying on rocky ground with its mouth wide open as if yawning.\">\n\n",
 				"date_published": "2025-12-22T09:34:31-07:00",
 				"url": "https://cliff538.com/2025/12/22/days-of-winter-wonder-photo.html",
 				"tags": ["photo"]
@@ -214,7 +223,7 @@
 				"id": "http://cliff538.micro.blog/2025/12/15/days-of-winter-wonder-photo.html",
 				
 				"content_html": "<p>📸 ❄️ 12 Days of Winter Wonder Photo Challenge - Day 1: Frost</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📸 ❄️ 12 Days of Winter Wonder Photo Challenge - Day 1: Frost\n\n\n<img src=\"https://cliff538.com/uploads/2025/365pixelsarchive-61.jpg\" width=\"600\" height=\"400\" alt=\"Auto-generated description: Delicate grasses sway gently against a blurred, tranquil blue background.\">\n",
+				"content_text": "📸 ❄️ 12 Days of Winter Wonder Photo Challenge - Day 1: Frost\n\n\n<img src=\"uploads/2025/365pixelsarchive-61.jpg\" width=\"600\" height=\"400\" alt=\"Auto-generated description: Delicate grasses sway gently against a blurred, tranquil blue background.\">\n",
 				"date_published": "2025-12-15T15:15:09-07:00",
 				"url": "https://cliff538.com/2025/12/15/days-of-winter-wonder-photo.html",
 				"tags": ["photo"]
