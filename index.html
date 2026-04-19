@@ -24,6 +24,70 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://cliff538.com/2026/04/18/custom-oura-ring-data-board.html">Custom Oura Ring Data Board </a></h1>
+		
+
+		<a href="https://cliff538.com/2026/04/18/custom-oura-ring-data-board.html" class="u-url"><time class="dt-published" datetime="2026-04-18 15:49:49 -0700">Apr 18, 2026</time></a>
+
+		<div class="e-content">
+			 <p>Poking around, I found out that Oura ring has a robust API, so I wanted to see what Claude Code could do with it. It took an afternoon of fiddling, but it seems to be a robust custom data board with about 4 years of data, that updates itself 3 times a day to a SQLite database. It runs on my Mac Mini home server.</p>
+<p>I can download my CSV data from the data board, and I also set it up to run a monthly report that makes an Apple Note for me and files it away. I had it run monthly reports for the past 4 years, and it&rsquo;s an excellent way to digest sleep data.</p>
+<p>The best part is a second page on the dashboard called the Correlation Explorer, where you can see how tag data affects your sleep. You do have to remember to add tags, late meals, massage, medication, sauna, vaccinations, etc., and you can start to see what is helping and hurting your rest. You can see the evidence on my board. On this note, my wife swears that a hot shower before bed helps you fall asleep faster. That&rsquo;s the next test that will be tracked with tags. We shall see.</p>
+<p>I know a lot of people don&rsquo;t like A.I., but I&rsquo;m still in awe of the things I can build with it. This is so far beyond my skill level. And the data analysis that I can now do is truly helping my sleep. The older I&rsquo;ve gotten, the worse my sleep has been. I&rsquo;ve increased my sleep by one hour per night just from the Oura ring data.</p>
+<p>I like the Oura ring app, and they have their own web view that is really nice, but being able to customize what you want to see and how is pretty neat.</p>
+<p>If you have any trouble with sleep, I highly recommend using the Oura ring for 6 months or so, using tags, and figuring out what helps and hurts your sleep.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>For the curious, here are some technical details.</p>
+<p>The Stack Snapshot:</p>
+<ul>
+<li><strong>Next.js 14 (App Router) + TypeScript + Tailwind</strong> on the frontend and API layer.</li>
+<li><strong>SQLite via <code>better-sqlite3</code></strong> &ndash; synchronous API, ~23MB database holding ~4.4 years of history.</li>
+<li><strong>Node.js v22</strong>, brew-pinned on the prod host.</li>
+<li><strong>PM2</strong> managing the Next.js process on port 3001 (alongside a sibling &ldquo;Status Board&rdquo; app on 3000).</li>
+<li><strong>launchd</strong> for scheduled jobs (not cron &ndash; it&rsquo;s macOS).</li>
+<li><strong>Tailscale</strong> for access; the dashboard has no public internet exposure.</li>
+<li>About <strong>2,800 lines</strong> across the key files (ingest, queries, schema, pages), <strong>22 React components</strong>.</li>
+</ul>
+<p>The Data Pipeline:</p>
+<p>Pulls 16 endpoints from Oura&rsquo;s v2 API on a <strong>14-day incremental window</strong> per run. Deliberately <strong>skips <code>heartrate</code> and <code>interbeat_interval</code></strong> &ndash; those would 10x the DB for no visible dashboard benefit, and can be backfilled later if HRV analysis ever happens.</p>
+<ul>
+<li><strong>Idempotent by design.</strong> Every row is an <code>INSERT OR REPLACE</code> on the Oura-assigned document ID (with <code>UNIQUE(day)</code> constraints on daily tables). Re-running ingest is a safe no-op; late-arriving recomputes overwrite stale scores.</li>
+<li><strong>Two-column storage pattern.</strong> Each table has explicit parsed columns for fast queries <em>plus</em> a <code>raw TEXT NOT NULL</code> column holding the entire API JSON. If I want to derive a new column later, I don&rsquo;t need to re-pull the API &ndash; just run a query over the raw JSON. Full-fidelity audit log, zero lossy transformations.</li>
+<li><strong>Every run is logged</strong> to an <code>ingest_runs</code> table (endpoint, start/end dates, status, doc counts, errors). Makes it trivial to see &ldquo;did the 8am run land last night&rsquo;s sleep yet?&rdquo; &ndash; which I used twice this week.</li>
+<li><strong>~150 API requests, ~5 seconds per run</strong> &ndash; well under Oura&rsquo;s 5000 req / 5 min limit, which leaves tons of room for backfill runs.</li>
+</ul>
+<p>Scheduling:</p>
+<p><code>launchd</code> fires <code>npm run ingest</code> <strong>three times daily</strong> (8:00, 12:00, 16:00). The multiple fires exist because Oura&rsquo;s detailed sleep endpoint publishes ~1&ndash;3h post-wake, so the 8am run catches the score, later runs catch the detail. A separate monthly <code>launchd</code> job fires on the 1st at 9:15am to produce a digest.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://cliff538.com/2026/04/18/testing-webmention-httpsflorianphoto.html" class="u-url"><time class="dt-published" datetime="2026-04-18 10:52:22 -0700">Apr 18, 2026</time></a>
+
+		<div class="e-content">
+			 <p>Testing Webmention</p>
+<p><a href="https://florian.photo/2026-04-17">florian.photo/2026-04-1&hellip;</a></p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://cliff538.com/2026/04/17/webmention-testing.html" class="u-url"><time class="dt-published" datetime="2026-04-17 16:28:40 -0700">Apr 17, 2026</time></a>
+
+		<div class="e-content">
+			 <p>Webmention <a href="https://365pixels.xyz/2026/04/17/lake-powell.html">testing</a>.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 			<h1><a href="https://cliff538.com/2026/04/12/silent-sunday.html">Silent Sunday </a></h1>
 		
 
